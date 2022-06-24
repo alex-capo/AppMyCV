@@ -151,4 +151,7 @@
   <ItemGroup>
     <BundleResource Include="Resources\Icon.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Ink.png" />
+  </ItemGroup>
 </Project>
