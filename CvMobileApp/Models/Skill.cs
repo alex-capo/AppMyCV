@@ -1,7 +1,6 @@
-﻿using System;
-namespace CvMobileApp.Models
+﻿namespace CvMobileApp.Models
 {
-    public class Skills
+    public class Skill
     {
         private string _picture = string.Empty;
         private string _title = string.Empty;
@@ -25,7 +24,7 @@ namespace CvMobileApp.Models
             set { _percentage = value; }
         }
 
-        public Skills(string picture, string title, double percentage)
+        public Skill(string picture, string title, double percentage)
         {
             Picture = picture;
             Title = title;

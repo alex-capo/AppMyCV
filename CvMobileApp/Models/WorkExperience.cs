@@ -1,5 +1,4 @@
-﻿using System;
-namespace CvMobileApp.Models
+﻿namespace CvMobileApp.Models
 {
     public class WorkExperience
     {
