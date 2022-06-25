@@ -158,4 +158,31 @@
   <ItemGroup>
     <BundleResource Include="Resources\Ink.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Ig.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Inclusion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Webcat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Profile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Appcenter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\CSharp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Dotnet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Firebase.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Xamarin.png" />
+  </ItemGroup>
 </Project>

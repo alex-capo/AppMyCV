@@ -5,13 +5,13 @@
              x:Class="CvMobileApp.Views.MyPage"
              BackgroundColor="#f0f0f0">
     <ScrollView>
-        <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto">
+        <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto">
             <Frame Grid.Row="0" BackgroundColor="{StaticResource MainColor}" HeightRequest="100" CornerRadius="20" HasShadow="False" Margin="0,-50,0,0" />
-            <sfavatar:SfAvatarView Grid.Row="1" BorderWidth="0" ContentType="Custom" ImageSource="Icon" HorizontalOptions="Center" VerticalOptions="Start" WidthRequest="140" HeightRequest="140" CornerRadius="70" Margin="0,-65,0,0" />
+            <sfavatar:SfAvatarView Grid.Row="1" BorderWidth="0" ContentType="Custom" ImageSource="Profile" HorizontalOptions="Center" VerticalOptions="Start" WidthRequest="140" HeightRequest="140" CornerRadius="70" Margin="0,-65,0,0" />
             <Label Grid.Row="2" Text="Alex Deantonio" FontAttributes="Bold" HorizontalOptions="Center" FontSize="22" Margin="0,10,0,0" TextColor="#a7a7a7"/>
             <Label Grid.Row="3" Text="Senior Xamarin Mobile Developer&#10;Droid / iOS" HorizontalTextAlignment="Center" FontAttributes="Bold" TextColor="#a7a7a7" FontSize="15" Margin="0,10,0,0"/>
             <Frame Grid.Row="4" BackgroundColor="{StaticResource MainColor}" Margin="10" CornerRadius="5" >
-                <Label Text="I'm systems engineer with +9 years of experience developing software with .NET, Xamarin mobile professional and developer certified by Microsoft." TextColor="White" HorizontalTextAlignment="Center" />
+                <Label Text="I'm systems engineer with +9 years of experience developing software in .NET, Xamarin mobile professional and developer certified by Microsoft." TextColor="White" HorizontalTextAlignment="Center" />
             </Frame>
             <Grid Grid.Row="5" RowDefinitions="*,*" ColumnDefinitions="Auto,Auto" HorizontalOptions="EndAndExpand" Padding="0,10" RowSpacing="10" ColumnSpacing="10" Margin="10,0">
                 <Label Grid.Row="0" Grid.Column="0" Text="LinkedIn profile" FontSize="14" FontAttributes="Bold" HorizontalOptions="End" TextColor="Blue" TextDecorations="Underline">
@@ -27,24 +27,25 @@
             </Grid>
             <!--Line and descripcion-->
             <BoxView Grid.Row="6" HorizontalOptions="FillAndExpand" HeightRequest="1" Color="Silver" Margin="20,0"/>
-            <Label Grid.Row="7" FontSize="14" FontAttributes="Bold" TextColor="#a7a7a7"  Margin="20" LineHeight="1.2" HorizontalTextAlignment="Center" Text="- Xamarin - C# - MVVM - .NET 6.0 -	Visual Studio - NUnit - App center -"/>
+            <Label Grid.Row="7" FontSize="14" FontAttributes="Bold" TextColor="#a7a7a7"  Margin="20" LineHeight="1.2" HorizontalTextAlignment="Center" Text="- Xamarin - C# - MVVM - .NET 6.0 - Visual Studio - .Git - - NUnit - App center - Firebase -"/>
 
             <!--Work Experience-->
             <Frame Grid.Row="8" HasShadow="False" Margin="15,0" CornerRadius="5" BackgroundColor="White">
                 <StackLayout>
                     <Label Text="Work experience" FontSize="15" FontAttributes="Bold" Margin="0,0,0,10"/>
                     <BoxView HorizontalOptions="FillAndExpand" HeightRequest="1" Color="Silver" Margin="0,0,0,10" />
-
-                    <CollectionView ItemsSource="{Binding EducationCollection}"
-                                       HeightRequest="170" 
-                                       VerticalScrollBarVisibility="Never">
+                    <CollectionView ItemsSource="{Binding WorkExperience}"
+                                    HeightRequest="260"
+                                    VerticalOptions="FillAndExpand"
+                                    VerticalScrollBarVisibility="Never">
                         <CollectionView.ItemTemplate>
                             <DataTemplate>
                                 <Grid RowDefinitions="Auto,Auto,Auto" ColumnDefinitions="Auto,*" Padding="0,0,0,30" >
-                                    <sfavatar:SfAvatarView Grid.Row="0" Grid.Column="0" Grid.RowSpan="3" BorderWidth="0" Margin="0,0,10,0" ContentType="Custom" ImageSource="{Binding Picture}" HorizontalOptions="Center" VerticalOptions="Start" WidthRequest="50" HeightRequest="50" CornerRadius="25" />
-                                    <Label Grid.Row="0" Grid.Column="1" Text="{Binding Title}" FontAttributes="Bold" FontSize="14"/>
-                                    <Label Grid.Row="1" Grid.Column="1" Text="{Binding Description}" FontSize="13"/>
-                                    <Label Grid.Row="2" Grid.Column="1" Text="{Binding Years}" FontSize="13"/>
+                                    <Image Grid.Row="0" Grid.Column="0" Grid.RowSpan="3" Source="{Binding Picture}" Margin="0,0,10,0" HeightRequest="40" />
+                                    <!--<sfavatar:SfAvatarView Grid.Row="0" Grid.Column="0" Grid.RowSpan="3" BorderWidth="0" Margin="0,0,10,0" ContentType="Custom" ImageSource="{Binding Picture}" HorizontalOptions="Center" VerticalOptions="Start" WidthRequest="50" HeightRequest="50" CornerRadius="25" />-->
+                                    <Label Grid.Row="0" Grid.Column="1" Text="{Binding Position}" FontAttributes="Bold" FontSize="14"/>
+                                    <Label Grid.Row="1" Grid.Column="1" Text="{Binding Company}" FontSize="13"/>
+                                    <Label Grid.Row="2" Grid.Column="1" Text="{Binding Time}" FontSize="13"/>
                                 </Grid>
                             </DataTemplate>
                         </CollectionView.ItemTemplate>
@@ -53,20 +54,18 @@
             </Frame>
 
             <!--Skills-->
-
-            <Frame Grid.Row="9" HasShadow="False" Margin="20,30" CornerRadius="20" BackgroundColor="White">
+            <Frame Grid.Row="9" HasShadow="False" Margin="15" CornerRadius="5" BackgroundColor="White">
                 <StackLayout>
                     <Label Text="Skills" FontSize="15" FontAttributes="Bold" Margin="0,0,0,10"/>
                     <BoxView HorizontalOptions="FillAndExpand" HeightRequest="1" Color="Silver" />
-
                     <CollectionView ItemsSource="{Binding SkillsCollection}"
-                                       HeightRequest="300" 
-                                       VerticalScrollBarVisibility="Never">
+                                    HeightRequest="280" 
+                                    Margin="0,10"
+                                    VerticalScrollBarVisibility="Never">
                         <CollectionView.ItemTemplate>
                             <DataTemplate>
-                                <Grid RowDefinitions="Auto,Auto" ColumnDefinitions="Auto,*" Padding="0,0,0,30">
-                                    <Image Grid.Row="0" Grid.Column="0" Grid.RowSpan="3" Margin="0,0,10,0" Source="{Binding Picture}"
-                                                      VerticalOptions="Start" WidthRequest="50" HeightRequest="50" />
+                                <Grid RowDefinitions="Auto,Auto" ColumnDefinitions="Auto,*" Margin="0,5">
+                                    <sfavatar:SfAvatarView Grid.Row="0" Grid.Column="0" Grid.RowSpan="3" BorderWidth="0" Margin="0,0,10,0" CornerRadius="70" ContentType="Custom" ImageSource="{Binding Picture}" VerticalOptions="Start" WidthRequest="40" HeightRequest="40" />
                                     <Label Grid.Row="0" Grid.Column="1" Text="{Binding Title}" FontAttributes="Bold" FontSize="14"/>
                                     <ProgressBar Grid.Row="1" Grid.Column="1" Progress="{Binding Percentage}" ProgressColor="Blue"/>
                                 </Grid>
@@ -75,7 +74,9 @@
                     </CollectionView>
                 </StackLayout>
             </Frame>
-
+            <Frame Grid.Row="10" BackgroundColor="{StaticResource MainColor}" HeightRequest="50" HasShadow="False" Padding="0">
+                <Label Text="©2022 Alex Deantonio. All rights reserved." HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" FontSize="12" TextColor="#a7a7a7"/>
+            </Frame>
         </Grid>
     </ScrollView>
 </ContentPage>
