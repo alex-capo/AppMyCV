@@ -4,7 +4,7 @@
        x:Class="CvMobileApp.AppShell"
        Shell.ForegroundColor="#a7a7a7"
        xmlns:sfavatar="clr-namespace:Syncfusion.XForms.AvatarView;assembly=Syncfusion.Core.XForms"
-       BackgroundColor="#77448B">
+       BackgroundColor="#0B1984">
 
     <Shell.FlyoutHeaderTemplate>
         <DataTemplate>
@@ -28,11 +28,11 @@
     <Shell.FlyoutBackdrop>
           <LinearGradientBrush StartPoint="0,0"
                                EndPoint="1,1">
-              <GradientStop Color="Violet"
+            <GradientStop Color="#BF3AED"
                             Offset="0.1" />
-              <GradientStop Color="DarkViolet"
+            <GradientStop Color="#37169B"
                             Offset="0.6" />
-              <GradientStop Color="DarkBlue"
+            <GradientStop Color="#0B1984"
                             Offset="1.0" />
           </LinearGradientBrush>
       </Shell.FlyoutBackdrop>
@@ -41,7 +41,7 @@
 
     <Shell.FlyoutFooterTemplate>
         <DataTemplate>
-            <StackLayout BackgroundColor="#77448B" HeightRequest="64">
+            <StackLayout BackgroundColor="{StaticResource MainColor}" HeightRequest="64">
                 <Label Text="©2022 Alex Deantonio. All rights reserved." HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" FontSize="12" TextColor="#a7a7a7"/>
             </StackLayout>
         </DataTemplate>

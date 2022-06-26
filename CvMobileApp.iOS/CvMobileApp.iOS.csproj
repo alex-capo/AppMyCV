@@ -184,4 +184,13 @@
   <ItemGroup>
     <BundleResource Include="Resources\Xamarin.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Certjoin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Itcertificate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Microsoft.png" />
+  </ItemGroup>
 </Project>

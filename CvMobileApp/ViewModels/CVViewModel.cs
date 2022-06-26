@@ -21,10 +21,10 @@ namespace CvMobileApp.ViewModels
             workExperience.Add(new WorkExperience("Ig", "Software Development Engineer", "Intergrupo", "Apr 2016 - Jul 2019 · 3 yrs 4 mos"));
 
 
-            certificationCollection.Add(new Certification("", "Agile Test Driven Development Certified", "CertJoin", "May 2021"));
-            certificationCollection.Add(new Certification("", "Scrum Master Certified", "ITCertificate", "Apr 2021"));
-            certificationCollection.Add(new Certification("", "Xamarin Certified Mobile Developer", "Microsoft", "Jun 2018"));
-            certificationCollection.Add(new Certification("", "Xamarin Certified Mobile Professional", "Microsoft", "Dec 2017"));
+            certificationCollection.Add(new Certification("Certjoin", "Agile Test Driven Development Certified", "CertJoin", "May 2021"));
+            certificationCollection.Add(new Certification("Itcertificate", "Scrum Master Certified", "ITCertificate", "Apr 2021"));
+            certificationCollection.Add(new Certification("Microsoft", "Xamarin Certified Mobile Developer", "Microsoft", "Jun 2018"));
+            certificationCollection.Add(new Certification("Microsoft", "Xamarin Certified Mobile Professional", "Microsoft", "Dec 2017"));
 
 
             //Skills

@@ -50,7 +50,7 @@
                     <xct:Expander.Content>
                         <CollectionView ItemsSource="{Binding WorkExperience}"
                                         VerticalOptions="FillAndExpand"
-                                         HeightRequest="230"
+                                         HeightRequest="240"
                                         VerticalScrollBarVisibility="Never">
                             <CollectionView.ItemTemplate>
                                 <DataTemplate>
@@ -87,12 +87,12 @@
                     </xct:Expander.Header>
                     <xct:Expander.Content>
                         <CollectionView ItemsSource="{Binding CertificationCollection}"
-                                    HeightRequest="330"
-                                    VerticalOptions="FillAndExpand"
-                                    VerticalScrollBarVisibility="Never">
+                                        HeightRequest="330"
+                                        VerticalOptions="FillAndExpand"
+                                        VerticalScrollBarVisibility="Never">
                             <CollectionView.ItemTemplate>
                                 <DataTemplate>
-                                    <Grid RowDefinitions="Auto,Auto,Auto" ColumnDefinitions="Auto,*" Padding="0,20,0,0" >
+                                    <Grid RowDefinitions="Auto,Auto,Auto" ColumnDefinitions="Auto,*" Padding="0,20,0,0" RowSpacing="3">
                                         <Image Grid.Row="0" Grid.Column="0" Grid.RowSpan="3" Source="{Binding Picture}" Margin="0,0,10,0" HeightRequest="40" />
                                         <!--<sfavatar:SfAvatarView Grid.Row="0" Grid.Column="0" Grid.RowSpan="3" BorderWidth="0" Margin="0,0,10,0" ContentType="Custom" ImageSource="{Binding Picture}" HorizontalOptions="Center" VerticalOptions="Start" WidthRequest="50" HeightRequest="50" CornerRadius="25" />-->
                                         <Label Grid.Row="0" Grid.Column="1" Text="{Binding Title}" FontAttributes="Bold" FontSize="14"/>
@@ -125,7 +125,7 @@
                     </xct:Expander.Header>
                     <xct:Expander.Content>
                         <CollectionView ItemsSource="{Binding SkillCollection}"
-                                        HeightRequest="290"
+                                        HeightRequest="320"
                                         VerticalOptions="FillAndExpand"
                                         VerticalScrollBarVisibility="Never"
                                         Margin="0,20,0,0">
@@ -147,7 +147,7 @@
                     </xct:Expander.Triggers>
                 </xct:Expander>
             </Frame>
-            <Frame Grid.Row="11" BackgroundColor="{StaticResource MainColor}" HeightRequest="450" Margin="0,0,0,-460" CornerRadius="0"  HasShadow="False" Padding="0,20">
+            <Frame Grid.Row="11" BackgroundColor="{StaticResource MainColor}" HeightRequest="20" CornerRadius="0"  HasShadow="False" Padding="0,20">
                 <Label Text="©2022 Alex Deantonio. All rights reserved." HorizontalOptions="CenterAndExpand" VerticalOptions="Start" FontSize="12" TextColor="#a7a7a7"/>
             </Frame>
         </Grid>
