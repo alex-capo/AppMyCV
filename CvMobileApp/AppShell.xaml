@@ -1,0 +1,50 @@
+﻿<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:app="clr-namespace:CvMobileApp.Views"
+       x:Class="CvMobileApp.AppShell"
+       Shell.ForegroundColor="#a7a7a7"
+       xmlns:sfavatar="clr-namespace:Syncfusion.XForms.AvatarView;assembly=Syncfusion.Core.XForms"
+       BackgroundColor="#77448B">
+
+    <Shell.FlyoutHeaderTemplate>
+        <DataTemplate>
+            <Grid BackgroundColor="Transparent" HeightRequest="200">
+                <Image Aspect="Fill"
+                       Source="Futuristic"
+                       Opacity="0.9" />
+                <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+                    <sfavatar:SfAvatarView BorderWidth="0" ContentType="Custom" ImageSource="Icon" HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="70" HeightRequest="70" CornerRadius="70" />
+                    <Label Text="Senior Xamarin Developer"
+                           TextColor="White"
+                           FontAttributes="Bold"
+                           HorizontalTextAlignment="Center"
+                           VerticalTextAlignment="End" />
+                </StackLayout>
+                
+            </Grid>            
+        </DataTemplate>
+    </Shell.FlyoutHeaderTemplate>
+
+    <Shell.FlyoutBackdrop>
+          <LinearGradientBrush StartPoint="0,0"
+                               EndPoint="1,1">
+              <GradientStop Color="Violet"
+                            Offset="0.1" />
+              <GradientStop Color="DarkViolet"
+                            Offset="0.6" />
+              <GradientStop Color="DarkBlue"
+                            Offset="1.0" />
+          </LinearGradientBrush>
+      </Shell.FlyoutBackdrop>
+
+    <ShellContent Title="Home" Icon="Home.png" ContentTemplate="{DataTemplate app:MyPage}" />
+
+    <Shell.FlyoutFooterTemplate>
+        <DataTemplate>
+            <StackLayout BackgroundColor="#77448B" HeightRequest="64">
+                <Label Text="©2022 Alex Deantonio. All rights reserved." HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" FontSize="12" TextColor="#a7a7a7"/>
+            </StackLayout>
+        </DataTemplate>
+    </Shell.FlyoutFooterTemplate>
+
+</Shell>

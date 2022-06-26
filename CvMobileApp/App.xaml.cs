@@ -1,6 +1,4 @@
-﻿using System;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
+﻿using Xamarin.Forms;
 
 namespace CvMobileApp
 {
@@ -9,8 +7,8 @@ namespace CvMobileApp
         public App()
         {
             InitializeComponent();
-
-            MainPage = new Views.MyPage();
+            //MainPage = new Views.MainPage();
+            MainPage = new AppShell();
         }
 
         protected override void OnStart()

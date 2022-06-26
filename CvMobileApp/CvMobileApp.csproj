@@ -14,12 +14,18 @@
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2478" />
     <PackageReference Include="Xamarin.Essentials" Version="1.7.3" />
     <PackageReference Include="Syncfusion.Xamarin.Core" Version="20.1.0.58" />
+    <PackageReference Include="ReactiveUI" Version="18.2.5" />
+    <PackageReference Include="ReactiveUI.XamForms" Version="18.2.5" />
+    <PackageReference Include="Xamarin.CommunityToolkit" Version="2.0.2" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Syncfusion.Xamarin.Core" />
     <None Remove="Views\" />
     <None Remove="Models\" />
     <None Remove="ViewModels\" />
+    <None Remove="ReactiveUI" />
+    <None Remove="ReactiveUI.XamForms" />
+    <None Remove="Xamarin.CommunityToolkit" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\" />

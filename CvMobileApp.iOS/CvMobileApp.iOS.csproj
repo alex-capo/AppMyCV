@@ -151,9 +151,8 @@
     <BundleResource Include="Resources\Calendar.png" />
     <BundleResource Include="Resources\Home.png" />
     <BundleResource Include="Resources\Icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Icon.jpg" />
+    <BundleResource Include="Resources\Futuristic.png" />
+    <BundleResource Include="Resources\Arrow_down.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Ink.png" />
