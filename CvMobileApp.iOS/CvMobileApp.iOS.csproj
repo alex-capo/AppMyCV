@@ -220,4 +220,16 @@
   <ItemGroup>
     <BundleResource Include="Resources\Ironman9.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Ironman3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Ironman4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Ironman5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Ironman6.jpg" />
+  </ItemGroup>
 </Project>
