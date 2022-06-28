@@ -3,6 +3,6 @@
     <color name="launcher_background">#FFFFFF</color>
     <color name="colorPrimary">#77448B</color>
     <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">#E81938</color>
 	<color name="colorOfStatusBar">#0B1984</color>
 </resources>

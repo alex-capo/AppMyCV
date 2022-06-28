@@ -193,4 +193,31 @@
   <ItemGroup>
     <BundleResource Include="Resources\Microsoft.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Ironman.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Ironman2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Google.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Facebook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Apple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Ironman10.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Ironman7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Ironman8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Ironman9.jpg" />
+  </ItemGroup>
 </Project>

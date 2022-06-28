@@ -26,18 +26,15 @@
     </Shell.FlyoutHeaderTemplate>
 
     <Shell.FlyoutBackdrop>
-          <LinearGradientBrush StartPoint="0,0"
-                               EndPoint="1,1">
-            <GradientStop Color="#BF3AED"
-                            Offset="0.1" />
-            <GradientStop Color="#37169B"
-                            Offset="0.6" />
-            <GradientStop Color="#0B1984"
-                            Offset="1.0" />
+          <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#BF3AED" Offset="0.1" />
+            <GradientStop Color="#37169B" Offset="0.6" />
+            <GradientStop Color="#0B1984" Offset="1.0" />
           </LinearGradientBrush>
       </Shell.FlyoutBackdrop>
 
     <ShellContent Title="Home" Icon="Home.png" ContentTemplate="{DataTemplate app:MyPage}" />
+    <ShellContent Title="Demo login IRONMAN" Icon="Ironman.png" ContentTemplate="{DataTemplate app:DemoIronmanPage}" />
 
     <Shell.FlyoutFooterTemplate>
         <DataTemplate>
