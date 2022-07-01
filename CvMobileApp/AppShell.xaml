@@ -4,6 +4,8 @@
        x:Class="CvMobileApp.AppShell"
        Shell.ForegroundColor="#a7a7a7"
        xmlns:sfavatar="clr-namespace:Syncfusion.XForms.AvatarView;assembly=Syncfusion.Core.XForms"
+       xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+       ios:Page.UseSafeArea="True"
        BackgroundColor="#0B1984">
 
     <Shell.FlyoutHeaderTemplate>

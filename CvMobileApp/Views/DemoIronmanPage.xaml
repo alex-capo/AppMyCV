@@ -7,6 +7,8 @@
              NavigationPage.HasBackButton="True"
              xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
              xmlns:sfavatar="clr-namespace:Syncfusion.XForms.AvatarView;assembly=Syncfusion.Core.XForms"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="True"
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              BackgroundColor="Black">
     <Shell.TitleView>
@@ -31,7 +33,7 @@
                 </CarouselView>
             </StackLayout>
             <!-- Main information-->
-            <ScrollView Grid.Row="0">
+            <ScrollView Grid.Row="0" VerticalOptions="End" Margin="0,-20,0,0">
                 <Frame HasShadow="False" Margin="15,5" VerticalOptions="EndAndExpand" CornerRadius="5" Opacity="0.9" BackgroundColor="#2e2b2c">
                     <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto" RowSpacing="15" Padding="0,10,0,0">
                         <IndicatorView  x:Name="IndicatorView"

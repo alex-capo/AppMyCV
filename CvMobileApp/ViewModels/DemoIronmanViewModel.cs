@@ -23,14 +23,14 @@ namespace CvMobileApp.ViewModels
         {
             var listImage = new List<ImageCarousel>()
             {
-                new ImageCarousel { Path="Ironman8" },
-                new ImageCarousel { Path="Ironman3" },
-                new ImageCarousel { Path="Ironman4" },
-                new ImageCarousel { Path="Ironman5" },
-                new ImageCarousel { Path="Ironman6" },
-                new ImageCarousel { Path="Ironman7" },
-                new ImageCarousel { Path="Ironman9" },
-                new ImageCarousel { Path="Ironman10" }
+                new ImageCarousel { Path="Ironman8.jpg" },
+                new ImageCarousel { Path="Ironman3.jpg" },
+                new ImageCarousel { Path="Ironman4.jpg" },
+                new ImageCarousel { Path="Ironman5.jpg" },
+                new ImageCarousel { Path="Ironman6.jpg" },
+                new ImageCarousel { Path="Ironman7.png" },
+                new ImageCarousel { Path="Ironman9.jpg" },
+                new ImageCarousel { Path="Ironman10.jpg" }
             };
 
             CarouselView.ItemsSource = listImage;
