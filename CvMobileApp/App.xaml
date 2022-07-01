@@ -23,6 +23,10 @@
                 <Setter Property="TextColor"       Value = "White"    />
                 <Setter Property="BackgroundColor" Value = "{StaticResource MainColorIronman}"    />
             </Style>
+            <Style TargetType="Label" x:Key="ErrorTextStyle">
+                <Setter Property="TextColor" Value = "{StaticResource MainColorIronman}"   />
+                <Setter Property="FontSize" Value = "12"   />
+            </Style>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

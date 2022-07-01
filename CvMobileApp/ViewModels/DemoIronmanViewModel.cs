@@ -1,22 +1,33 @@
-﻿using CvMobileApp.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Text;
+using System.ComponentModel;
+using System.Windows.Input;
+using CvMobileApp.Helpers.Validations;
+using CvMobileApp.Helpers.Validations.Rules;
+using CvMobileApp.Models;
 using Xamarin.Forms;
-using System.Linq;
 
 namespace CvMobileApp.ViewModels
 {
-    public class DemoIronmanViewModel
+    public class DemoIronmanViewModel : INotifyPropertyChanged
     {
         public List<ImageCarousel> ImagesCarousel { get; set; }
 
+        public ValidatablePair<string> Email { get; set; } = new ValidatablePair<string>();
+
         public CarouselView CarouselView { get; set; }
+
+        public ICommand SignInCommand => new Command(async () =>
+        {
+            if (AreFieldsValid())
+            {
+                await App.Current.MainPage.DisplayAlert("Welcome", "", "Ok");
+            }
+        });
 
         public DemoIronmanViewModel()
         {
-            //FillCarousel();
+            AddValidationRules();
         }
 
         public void FillCarousel()
@@ -41,5 +52,16 @@ namespace CvMobileApp.ViewModels
                 return true;
             }));
         }
+
+        public void AddValidationRules()
+        {
+            //Email Validation Rules
+            Email.Item1.Validations.Add(new IsNotNullOrEmptyRule<string> { ValidationMessage = "Email Required" });
+            Email.Item1.Validations.Add(new IsValidEmailRule<string> { ValidationMessage = "Invalid Email" });
+        }
+
+        bool AreFieldsValid() => Email.Validate();
+
+        public event PropertyChangedEventHandler PropertyChanged;
     }
 }

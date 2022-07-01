@@ -37,6 +37,9 @@
 
     <ShellContent Title="Home" Icon="Home.png" ContentTemplate="{DataTemplate app:MyPage}" />
     <ShellContent Title="Demo login IRONMAN" Icon="Ironman.png" ContentTemplate="{DataTemplate app:DemoIronmanPage}" />
+    <ShellContent Title="Current Location" Icon="Home.png" ContentTemplate="{DataTemplate app:MyPage}" />
+    <ShellContent Title="CV in .pdf" Icon="Home.png" ContentTemplate="{DataTemplate app:MyPage}" />
+
 
     <Shell.FlyoutFooterTemplate>
         <DataTemplate>
