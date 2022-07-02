@@ -13,7 +13,7 @@ namespace CvMobileApp.ViewModels
     {
         public List<ImageCarousel> ImagesCarousel { get; set; }
 
-        public ValidatablePair<string> Email { get; set; } = new ValidatablePair<string>();
+        public ValidatableObject<string> Email { get; set; } = new ValidatableObject<string>();
 
         public CarouselView CarouselView { get; set; }
 
@@ -46,7 +46,7 @@ namespace CvMobileApp.ViewModels
 
             CarouselView.ItemsSource = listImage;
 
-            Device.StartTimer(TimeSpan.FromSeconds(3), (Func<bool>)(() => 
+            Device.StartTimer(TimeSpan.FromSeconds(4), (Func<bool>)(() => 
             {
                 CarouselView.Position = (CarouselView.Position + 1) % listImage.Count;
                 return true;
@@ -56,11 +56,15 @@ namespace CvMobileApp.ViewModels
         public void AddValidationRules()
         {
             //Email Validation Rules
-            Email.Item1.Validations.Add(new IsNotNullOrEmptyRule<string> { ValidationMessage = "Email Required" });
-            Email.Item1.Validations.Add(new IsValidEmailRule<string> { ValidationMessage = "Invalid Email" });
+            Email.Validations.Add(new IsNotNullOrEmptyRule<string> { ValidationMessage = "Your email is required" });
+            Email.Validations.Add(new IsValidEmailRule<string> { ValidationMessage = "Please use a valid email address" });
         }
 
-        bool AreFieldsValid() => Email.Validate();
+        bool AreFieldsValid()
+        {
+            Email.Value = Email.Value?.Trim();
+            return Email.Validate();
+        }
 
         public event PropertyChangedEventHandler PropertyChanged;
     }

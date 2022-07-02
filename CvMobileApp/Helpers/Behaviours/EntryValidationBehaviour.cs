@@ -2,10 +2,10 @@
 using Xamarin.Forms;
 namespace CvMobileApp.Helpers.Behaviours
 {
-    public class EntryLineValidationBehaviour : BehaviorBase<Entry>
+    public class EntryValidationBehaviour : BehaviorBase<Entry>
     {
         #region StaticFields
-        public static readonly BindableProperty IsValidProperty = BindableProperty.Create(nameof(IsValid), typeof(bool), typeof(EntryLineValidationBehaviour), true, BindingMode.Default, null, (bindable, oldValue, newValue) => OnIsValidChanged(bindable, newValue));
+        public static readonly BindableProperty IsValidProperty = BindableProperty.Create(nameof(IsValid), typeof(bool), typeof(EntryValidationBehaviour), true, BindingMode.Default, null, (bindable, oldValue, newValue) => OnIsValidChanged(bindable, newValue));
         #endregion
         #region Properties
         public bool IsValid
@@ -23,8 +23,7 @@ namespace CvMobileApp.Helpers.Behaviours
         #region StaticMethods
         private static void OnIsValidChanged(BindableObject bindable, object newValue)
         {
-            if (bindable is EntryLineValidationBehaviour IsValidBehavior &&
-                 newValue is bool IsValid)
+            if (bindable is EntryValidationBehaviour IsValidBehavior && newValue is bool IsValid)
             {
                 IsValidBehavior.AssociatedObject.PlaceholderColor = IsValid ? Color.Default : Color.Red;
             }

@@ -32,8 +32,7 @@ namespace CvMobileApp.Helpers.Validations
         {
             Errors.Clear();
 
-            IEnumerable<string> errors = Validations.Where(v => !v.Check(Value))
-                .Select(v => v.ValidationMessage);
+            IEnumerable<string> errors = Validations.Where(v => !v.Check(Value)).Select(v => v.ValidationMessage);
 
             Errors = errors.ToList();
             IsValid = !Errors.Any();
